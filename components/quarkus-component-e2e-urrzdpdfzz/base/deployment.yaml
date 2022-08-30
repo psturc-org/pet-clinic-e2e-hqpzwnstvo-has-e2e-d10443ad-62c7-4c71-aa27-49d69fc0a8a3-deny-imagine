@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: quarkus-component-e2e-urrzdpdfzz
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: java-quarkus
+    app.kubernetes.io/part-of: pet-clinic-e2e-hqpzwnstvo
+  name: quarkus-component-e2e-urrzdpdfzz
+  namespace: has-e2e-d10443ad-62c7-4c71-aa27-49d69fc0a8a3
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/instance: quarkus-component-e2e-urrzdpdfzz
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app.kubernetes.io/instance: quarkus-component-e2e-urrzdpdfzz
+    spec:
+      containers:
+      - image: quay.io/redhat-appstudio/user-workload:has-e2e-d10443ad-62c7-4c71-aa27-49d69fc0a8a3-quarkus-component-e2e-urrzdpdfzz
+        imagePullPolicy: Always
+        name: container-image
+        resources: {}
+status: {}
